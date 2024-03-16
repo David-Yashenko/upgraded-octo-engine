@@ -1,0 +1,40 @@
+pipeline{
+    agent any
+    environment{
+        REPO_URL = 'https://github.com/David-Yashenko/upgraded-octo-engine'
+        IMAGE_NAME = 'resume'
+        TAG = V1.${BUILD_NUMBER}
+        CONTAINER_NAME = 
+        REGISTRY = DockerHub
+        ACCOUNT_NAME = 'hothaifaz'
+        NEW_IMAGE_NAME = 
+    }
+    stages{
+        stage("clone"){
+            steps{
+                sh 'git clone $(REPO_URL)'
+                sh 'pwd'
+                sh 'find .'
+            } 
+        }
+        stage("build"){
+            steps{
+                sh "echo hi"
+            }
+        }
+        stage("A"){
+            steps{
+                sh "echo hi"
+            }
+        }
+        stage("A"){
+            steps{
+                sh "echo hi"
+            }
+        } 
+                    
+                    
+        
+    }
+}
+    
