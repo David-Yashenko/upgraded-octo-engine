@@ -1,13 +1,13 @@
 pipeline{
     agent any
-    environment{
+    environment {
         REPO_URL = 'https://github.com/David-Yashenko/upgraded-octo-engine'
         IMAGE_NAME = 'resume'
-        TAG = V1.${BUILD_NUMBER}
+        TAG = "V1.${BUILD_NUMBER}" 
         CONTAINER_NAME = 
-        REGISTRY = DockerHub
+        REGISTRY = 'DockerHub'
         ACCOUNT_NAME = 'hothaifaz'
-        NEW_IMAGE_NAME = 
+        NEW_IMAGE_NAME =
     }
     stages{
         stage("clone"){
@@ -27,7 +27,7 @@ pipeline{
                 sh "echo hi"
             }
         }
-        stage("A"){
+        stage("B"){
             steps{
                 sh "echo hi"
             }
